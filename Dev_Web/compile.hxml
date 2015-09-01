@@ -1,0 +1,5 @@
+-cp source
+-main Index
+-php export
+-resource tpl/contact-edit.html@contact-edit
+-resource tpl/contacts-list.html@contacts-list

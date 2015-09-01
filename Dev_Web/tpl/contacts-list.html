@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+	<title>Gestion des contacts</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, height=device-height"/>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head><body>
+	<header>
+		<h1>Liste des contacts</h1>
+	</header>
+	<section>
+		<table>
+			<thead>
+				<tr><th>Prénom</th><th>Nom</th>
+					<th><a class="button" href="?/contacts/0">Nouveau</a></th>
+				</tr>
+			</thead>
+			<tbody>
+			::foreach Contact::
+				<tr><td>::firstname::</td><td>::lastname::</td>
+					<td>
+						<a class="button" href="?/contacts/::id::">Détail</a>
+						<form method="POST" action="?/contacts/::id::" onsubmit="return confirm('Supprimer ::firstname:: ::lastname::')">
+							<input type="submit" value="Supprimer"/>
+						</form>
+					</td>
+				</tr>
+			::end::
+			</tbody>
+		</table>
+	</section>
+</body></html>

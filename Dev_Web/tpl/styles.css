@@ -1,0 +1,10 @@
+table, th, td { border: 1px solid; border-collapse: collapse; }
+td form { display: inline; }
+h1 { font-size: 14pt; text-decoration: underline; }
+a.button { border-radius: 3px; border: 1px solid #aaaaaa; padding: 3px 10px;
+	background: linear-gradient(#eeeeee, #dddddd); color: #222222;
+	text-decoration: none; font-family: sans; font-size: 80%;
+	display: inline-block; font-weight: normal; }
+a.button:hover { background: linear-gradient(#ffffff, #eeeeee); }
+fieldset { border: none; padding: 0.25em 0; }
+label { display: inline-block; width: 100px; }

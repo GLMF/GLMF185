@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+	<title>Gestion des contacts</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, height=device-height"/>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head><body>
+	<header>
+		<h1>Édition d'un contact</h1>
+	</header>
+	<section>
+		::if (null == id)::
+		<form action="?/contacts/0" method="post">
+		::else::
+		<form action="?/contacts/::id::" method="post">
+		::end::
+			<fieldset>
+				<label for="firstname">Prénom :</label>
+				<input id="firstname" name="firstname" type="text" required="required" value="::firstname::"/>
+			</fieldset>
+			<fieldset>
+				<label for="lastname">Nom :</label>
+				<input id="lastname" name="lastname" type="text" required="required" value="::lastname::"/>
+			</fieldset>
+			<fieldset>
+				<label for="email">Mél :</label>
+				<input id="email" name="email" type="email" value="::email::"/>
+			</fieldset>
+			<fieldset>
+				<label for="phone">Téléphone :</label>
+				<input id="phone" name="phone" type="text" value="::phone::" pattern="^[0-9 ]*$"/>
+			</fieldset>
+			<fieldset>
+				<a class="button" href="?/contacts">Retour</a>
+				<input type="submit" value="Enregistrer">
+			</fieldset>
+		</form>
+	</section>
+</body></html>
